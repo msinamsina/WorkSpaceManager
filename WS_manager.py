@@ -23,6 +23,12 @@ class WS_Manager:
         self.__global_WS={}
         self.set_ws(WS_name)
     
+    def __call__(self):
+        return self.__name
+
+    def __getitem__(self,key):
+        return self.__local_WS[key]
+
     #########################
     #   Private functions   #
     #########################
